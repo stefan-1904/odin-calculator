@@ -1,3 +1,19 @@
+const buttons = document.querySelectorAll('button');
+const calculatorDisplay = document.getElementById('display');
+
+function buttonHandler() {
+    buttons.forEach(function(button) {
+        button.addEventListener('click', () => {
+            let displayValue = calculatorDisplay.textContent += button.innerText;
+            return displayValue;
+        });
+    });
+}
+
+buttonHandler()
+
+
+
 function add(num1, num2) {
     return num1 + num2;
 }
@@ -32,6 +48,3 @@ function operate(operator, num1, num2) {
 let num1 = 10
 let num2 = 2
 let operator = '/';
-
-console.log(operate(operator, num1, num2));
-
